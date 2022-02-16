@@ -1,0 +1,155 @@
+:root{
+    --header-height: 200px
+}
+
+header{
+    position: sticky;
+    background-color: #A4243B;
+    top: 0;
+    height: 200px;
+    width: 100vw;
+    box-shadow: 0 5px 10px 0 rgba(164,36,59,50%);
+    border-bottom: 5px solid #1e2019;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logo{
+    position: relative;
+    width: 500px;
+    height: 150px;
+    /* left: 50%;
+    top: 100px;
+    margin-top: -75px;
+    margin-left: -250px; */
+}
+body{
+    background-color: #fffcf2;
+}
+.login{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: #fffcf2;
+    border-style: solid;
+    border-radius: 25%;
+    border-color: #efea5a;
+    border-width: 5px;
+    visibility: visible;
+}
+.login:hover{
+    background-color: #1e2019;
+}
+#login{
+    position: relative;
+    top: 5px;
+    color: #efea5a;
+    font-size: xx-large;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #048ba8;
+}
+.pokeIntro{
+    position: relative;
+    width: 720px;
+    height: 512px;
+    left: 50%;
+    margin-left: -360px;
+    top: 50%;
+    margin-top: -256px;
+}
+.video{
+    position:relative;
+    background-color: #efea5a;
+    border-style: solid;
+    border-color: #048ba8;
+    border-width: 5px;
+    border-radius: 10%;
+    top: 100px;
+    left: 50%;
+    margin-left: -350px;
+    width: 800px;
+    height: 592px;
+    z-index: -1;
+}
+.menu{
+    position: relative;
+    background: url('./pictures/Pokeball.png');
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    left: -20px;
+    border: none;
+    border-radius: 10%;
+    padding: 0;
+}
+.menu:hover{
+    background-color: #048ba8;
+}
+
+.sidebar.open .Home,.Pokedex,.Team-Builder{
+    display: block;
+}
+.sidebar{
+    position:fixed;
+    top: 205px;
+    left: 0px;
+    flex-shrink: 0;
+    width: 50px;
+    padding-top: 1rem;
+    background-color: #048ba8;
+    border-right: 5px solid #1e2019;
+    height: calc(100vh - var(--header-height));
+}
+main{
+    display: flex;
+    height: calc(100vh - var(--header-height));
+}
+.sidebar-list{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.sidebar-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sidebar-icon{
+    width: 50px;
+    height: 50px;
+}
+.sidebar-hidden{
+    display: none;
+}
+.sidebar-link{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10%;
+    align-items: center;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #A4243B;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #1e2019;
+    justify-content: space-between;
+}
+/* .sidebar.open .sidebar-hidden{
+    display: block;
+} */
+/* .sidebar-list-item.active{
+    background-color: #A4243B;
+} */
+.sidebar-link:hover{
+    background-color: #efea5a;
+}
