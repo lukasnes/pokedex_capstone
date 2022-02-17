@@ -1,5 +1,7 @@
 :root{
-    --header-height: 200px
+    --header-height: 200px;
+    --animation-duration: 200ms;
+    --animation-timing-curve: ease-in-out;
 }
 
 header{
@@ -21,10 +23,6 @@ header{
     position: relative;
     width: 500px;
     height: 150px;
-    /* left: 50%;
-    top: 100px;
-    margin-top: -75px;
-    margin-left: -250px; */
 }
 body{
     background-color: #fffcf2;
@@ -91,10 +89,6 @@ body{
 .menu:hover{
     background-color: #048ba8;
 }
-
-.sidebar.open .Home,.Pokedex,.Team-Builder{
-    display: block;
-}
 .sidebar{
     position:fixed;
     top: 205px;
@@ -105,6 +99,7 @@ body{
     background-color: #048ba8;
     border-right: 5px solid #1e2019;
     height: calc(100vh - var(--header-height));
+    transition: width var(--animation-duration) var(--animation-timing-curve);
 }
 main{
     display: flex;
@@ -118,23 +113,36 @@ main{
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
+    list-style: none;
 }
 .sidebar-list-item{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .sidebar-icon{
-    width: 50px;
+    width: 100%;
     height: 50px;
+    z-index: 2;
 }
 .sidebar-hidden{
-    display: none;
+    opacity: 0;
+    width: 0;
+    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+}
+.sidebar.open .sidebar-hidden{
+    width: 100%;
+    display: block;
+    font-size: x-large;
+    padding-right: 0;
+    opacity: 1;
 }
 .sidebar-link{
     display: flex;
     flex-direction: row;
     border-radius: 10%;
+    width: 100%;
     align-items: center;
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -144,12 +152,23 @@ main{
     -webkit-text-stroke-color: #1e2019;
     justify-content: space-between;
 }
-/* .sidebar.open .sidebar-hidden{
-    display: block;
-} */
-/* .sidebar-list-item.active{
+.sidebar-list-item.active::before{
+    content: "";
     background-color: #A4243B;
-} */
+    height: 100%;
+    left: 0;
+    width: 3px;
+    position: absolute
+}
 .sidebar-link:hover{
     background-color: #efea5a;
+}
+.sidebar.open{
+    width: 200px;
+}
+.sidebar.open .sidebar-link {
+    justify-content: flex-start;
+}
+.sidebar.open .sidebar-icon{
+    margin-right: -50px;
 }
