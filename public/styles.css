@@ -2,6 +2,7 @@
     --header-height: 200px;
     --animation-duration: 200ms;
     --animation-timing-curve: ease-in-out;
+    --text-animation-duration: 5000ms;
 }
 
 header{
@@ -12,6 +13,7 @@ header{
     width: 100vw;
     box-shadow: 0 5px 10px 0 rgba(164,36,59,50%);
     border-bottom: 5px solid #1e2019;
+    z-index: 1;
 }
 .header {
     display: flex;
@@ -73,7 +75,6 @@ body{
     margin-left: -350px;
     width: 800px;
     height: 592px;
-    z-index: -1;
 }
 .menu{
     position: relative;
@@ -126,16 +127,19 @@ main{
     height: 50px;
     z-index: 2;
 }
-.sidebar-hidden{
+.sidebar .sidebar-hidden{
+    white-space: nowrap;
+    display: none;
     opacity: 0;
     width: 0;
-    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+    transition: opacity var(--text-animation-duration) var(--animation-timing-curve);
 }
 .sidebar.open .sidebar-hidden{
     width: 100%;
+    height: auto;
     display: block;
     font-size: x-large;
-    padding-right: 0;
+    right: 0;
     opacity: 1;
 }
 .sidebar-link{
@@ -171,4 +175,29 @@ main{
 }
 .sidebar.open .sidebar-icon{
     margin-right: -50px;
+}
+.big-dex{
+    position: relative;
+    z-index: -1;
+    left: 25%;
+    top: 100px;
+}
+.dex-input{
+    position:relative;
+    left: calc(25% + 320px);
+    top: -220px;
+    width: 133px;
+    height: 41px;
+}
+#search{
+    position: relative;
+    background-image: url("./pictures/dex_btn.png");
+    width: 120px;
+    height: 80px;
+    border: none;
+    left: 311px;
+    top: -103px;
+}
+#search:hover{
+    border: 1px solid #1e2019;
 }

@@ -24,7 +24,7 @@
                         <svg class="sidebar-icon">
                             <image href="./pictures/home.png">
                         </svg>
-                        <div class="sidebar-hidden" id="Home">Home</div>
+                        <div class="sidebar-hidden">Home</div>
                     </a>
                 </li>
                 <li class="sidebar-list-item">
@@ -32,7 +32,7 @@
                         <svg class="sidebar-icon">
                             <image href="./pictures/pokedex.png">
                         </svg>
-                        <div class="sidebar-hidden" id="Pokedex">Pokedex</div>
+                        <div class="sidebar-hidden">Pokedex</div>
                     </a>
                 </li>
                 <li class="sidebar-list-item">
@@ -45,10 +45,20 @@
                 </li>
             </ul>
         </aside>
-        <div class = 'video'>
-            <iframe class = 'pokeIntro' src = 'https://www.youtube.com/embed/rg6CiPI6h2g' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <h1>
+            <div class="pokedex">
+                <img src="./pictures/big_dex.png" class="big-dex">
+                <form class="dex-req">
+                    <input class="dex-input"
+                        id="dex-input"
+                        type="text"
+                        placeholder="Find a Pokemon">
+                    <button id="search"></button>
+                </form>
+            </div>
+        </h1>
     </main>
-    <script src = './main.js'></script>
+    <script src = './pokedex.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </body>
 </html>
