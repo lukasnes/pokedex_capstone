@@ -60,6 +60,22 @@ app.get('/api/ability/:ability',(req,res) => {
         })
 })
 
+app.get('/api/move/:move',(req,res) => {
+  const { move } = req.params
+  rollbar.log(`A user tried to get info on ${move}`)
+  let moveInfo;
+  axios
+      .get(`https://pokeapi.co/api/v2/move/${move}/`)
+      .then(response => {
+        moveInfo = response.data
+        res.status(200).send(moveInfo)
+      })
+      .catch(err => {
+        rollbar.log(err)
+        res.status(400).send(err)
+      })
+})
+
 app.get('/api/spriteUp',(req,res) => {
     spritesArrIndex++
     while(pokeSprite[spritesArrIndex] == null){
