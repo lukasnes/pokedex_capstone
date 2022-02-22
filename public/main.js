@@ -1024,7 +1024,7 @@ const getPokemon = (pokemon) => {
 
             
         })
-        .catch(err => console.log(err))
+        .catch(err => alert('Must enter a valid Pokemon!'))
     }
     
     const changeDex = (evt) => {
