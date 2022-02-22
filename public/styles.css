@@ -243,6 +243,7 @@ main{
     height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     background-color: #A4243B;
     border: 5px solid #1e2019;
     border-radius: 10%;
@@ -251,7 +252,6 @@ main{
 .details::-webkit-scrollbar{
     display: none;
 }
-
 .ability-effect{
     font-weight: bold;
     font-size: medium;
