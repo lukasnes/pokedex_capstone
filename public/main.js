@@ -36,7 +36,7 @@ const typeDetails = (type) => {
     details.classList = 'details'
     detailsContainer.appendChild(details)
     axios
-        .get(`http://localhost:4000/api/types/${type}`)
+        .get(`/api/types/${type}`)
         .then(res => {
             console.log(res.data)
             const { damage_relations,generation,moves,name,pokemon } = res.data
@@ -302,7 +302,7 @@ const speciesDetails = (evt) => {
     details.classList = 'details'
     detailsContainer.appendChild(details)
     axios
-        .get(`http://localhost:4000/api/species/${speciesToSearch}`)
+        .get(`/api/species/${speciesToSearch}`)
         .then(res => {
             const { name,habitat,evolution_chain,egg_groups,capture_rate,is_legendary,is_mythical,generation } = res.data
 
@@ -353,7 +353,7 @@ const speciesDetails = (evt) => {
             egg_groups.forEach((el) => {
                 const { name } = el
                 axios
-                    .get(`http://localhost:4000/api/egg/${name}`)
+                    .get(`/api/egg/${name}`)
                     .then(res => {
                         const { name,pokemon_species } = res.data
                         let eggName = name
@@ -428,7 +428,7 @@ const moveDetails = (evt) => {
     details.classList = 'details'
     detailsContainer.appendChild(details)
     axios
-        .get(`http://localhost:4000/api/move/${move}`)
+        .get(`/api/move/${move}`)
         .then(res => {
             const { accuracy,damage_class,effect_entries,flavor_text_entries,generation,learned_by_pokemon,name,power,pp,stat_changes,type } = res.data
 
@@ -601,7 +601,7 @@ const moveDetails = (evt) => {
             const changeFlavorUp = (evt) => {
                 evt.preventDefault()
                 axios
-                    .get('http://localhost:4000/api/flavorUp')
+                    .get('/api/flavorUp')
                     .then(res => {
                         const { flavor_text,version_group } = res.data
                         flavorTextDisplay.textContent = flavor_text
@@ -631,7 +631,7 @@ const moveDetails = (evt) => {
             const changeFlavorDown = (evt) => {
                 evt.preventDefault()
                 axios
-                    .get('http://localhost:4000/api/flavorDown')
+                    .get('/api/flavorDown')
                     .then(res => {
                         const { flavor_text,version_group } = res.data
                         flavorTextDisplay.textContent = flavor_text
@@ -716,7 +716,7 @@ const abilityDetails = (evt) => {
     details.classList = 'details'
     detailsContainer.appendChild(details)
     axios
-        .get(`http://localhost:4000/api/ability/${ability}`)
+        .get(`/api/ability/${ability}`)
         .then(res => {
             const { effect_entries,generation } = res.data
             const abilityEffect = document.createElement('p')
@@ -879,7 +879,7 @@ const getPokemon = (pokemon) => {
             const changeSpriteUp = (evt) => {
                 evt.preventDefault()
                 axios
-                    .get('http://localhost:4000/api/spriteUp')
+                    .get('/api/spriteUp')
                     .then(res => {
                         console.log(res)
                         spriteDisplay.src = res.data
@@ -888,7 +888,7 @@ const getPokemon = (pokemon) => {
             const changeSpriteDown = (evt) => {
                 evt.preventDefault()
                 axios
-                    .get('http://localhost:4000/api/spriteDown')
+                    .get('/api/spriteDown')
                     .then(res => {
                         spriteDisplay.src = res.data
                     })
