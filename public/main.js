@@ -767,7 +767,7 @@ const getPokemonClick = (evt) => {
 const getPokemon = (pokemon) => {
     clearDex()
     axios
-        .get(`http://localhost:4000/api/pokemon/${pokemon}`)
+        .get(`/api/pokemon/${pokemon}`)
         .then(res => {
             const { abilities,moves,name,order,species,sprites,stats,types } = res.data
             console.log(res.data)
