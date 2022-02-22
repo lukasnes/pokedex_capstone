@@ -252,8 +252,6 @@ main{
     position: absolute;
     width: 300px;
     height: 500px;
-    display: flex;
-    flex-direction: column;
     overflow-y: scroll;
 }
 .effect-box::-webkit-scrollbar{
