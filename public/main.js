@@ -720,9 +720,6 @@ const abilityDetails = (evt) => {
         .then(res => {
             const { effect_entries,generation } = res.data
 
-            const effectBox = document.querySelector('div')
-            effectBox.classList = 'effect-box'
-            details.appendChild(effectBox)
             const abilityEffect = document.createElement('p')
             let genName = generation.name
             genName = genName.charAt(0).toUpperCase() + genName.slice(1)
@@ -731,7 +728,7 @@ const abilityDetails = (evt) => {
             genName = genNameSplit[0] + '-' + gen_num.toUpperCase()
             abilityEffect.textContent = `${evt.target.textContent} effect:`
             abilityEffect.classList = 'ability-effect'
-            effectBox.appendChild(abilityEffect)
+            details.appendChild(abilityEffect)
 
             let effects = effect_entries[1]
 
@@ -742,7 +739,7 @@ const abilityDetails = (evt) => {
             const abilityShortEffect = document.createElement('p')
             abilityShortEffect.textContent = `${evt.target.textContent} short effect:`
             abilityShortEffect.classList = 'ability-short-effect'
-            effectBox.appendChild(abilityShortEffect)
+            details.appendChild(abilityShortEffect)
 
             const shortEffect = document.createElement('p')
             shortEffect.textContent = effects.short_effect
@@ -751,7 +748,7 @@ const abilityDetails = (evt) => {
             const generationText = document.createElement('p')
             generationText.textContent = `This ability first appeared in ${genName}`
             generationText.classList = 'generation'
-            effectBox.appendChild(generationText)
+            details.appendChild(generationText)
         })
         .catch(err => console.log(err))
 }

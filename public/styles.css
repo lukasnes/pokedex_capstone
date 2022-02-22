@@ -239,26 +239,20 @@ main{
 }
 .details {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     width: 300px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
     background-color: #A4243B;
     border: 5px solid #1e2019;
     border-radius: 10%;
-}
-.effect-box{
-    position: absolute;
-    width: 300px;
-    height: 500px;
     overflow-y: scroll;
 }
-.effect-box::-webkit-scrollbar{
+.details::-webkit-scrollbar{
     display: none;
 }
+
 .ability-effect{
-    position:relative;
     font-weight: bold;
     font-size: medium;
     color: #efea5a;
