@@ -43,19 +43,13 @@ body{
     border-color: #efea5a;
     border-width: 5px;
     visibility: visible;
-}
-.login:hover{
-    background-color: #1e2019;
-}
-#login{
-    position: relative;
-    top: 5px;
     color: #efea5a;
     font-size: xx-large;
     text-decoration: none;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #048ba8;
 }
+
 .pokeIntro{
     position: relative;
     width: 720px;
