@@ -1034,6 +1034,7 @@ main{
     display: flex;
     width: 125px;
     overflow-x: scroll;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .double-damage-types::-webkit-scrollbar {
@@ -1068,6 +1069,7 @@ main{
     display: flex;
     width: 125px;
     overflow-x: scroll;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .strong-types::-webkit-scrollbar {
@@ -1102,6 +1104,7 @@ main{
     display: flex;
     width: 125px;
     overflow-x: scroll;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .weak-types::-webkit-scrollbar {
@@ -1136,6 +1139,7 @@ main{
     display: flex;
     width: 125px;
     overflow-x: scroll;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .weakest-types::-webkit-scrollbar {
