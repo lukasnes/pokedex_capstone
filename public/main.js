@@ -312,6 +312,9 @@ const speciesDetails = (evt) => {
             const { evoArr,evoNames } = evolution_chain
             const imgBox = document.createElement('div')
             imgBox.classList = 'evo-image'
+            if(evoArr.length <= 3){
+                imgBox.style.justifyContent = 'center'
+            }
             evoArr.forEach((el,i) => {
                 let poke_box = document.createElement('div')
                 poke_box.classList = 'poke-box'
